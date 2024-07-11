@@ -1,4 +1,4 @@
-export type IProduct = { 
+export interface IProduct { 
     id: string;
     name?: string
     imagePath?: string

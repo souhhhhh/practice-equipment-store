@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { CounterState } from './types'
 import { IProduct } from '../../types';
 
@@ -47,9 +47,15 @@ export const counterSlice = createSlice({
             state.totalPrice = state.item.reduce((sum, obj) => { 
                 return (obj.price * obj.count) + sum
             }, 0)
+
         },
         removeItem: (state, action) => { 
             state.item = state.item.filter((obj) => obj.id !== action.payload)
+            
+
+            state.totalPrice = state.item.reduce((sum, obj) => { 
+                return (obj.price * obj.count) + sum
+            }, 0)
         }       
     }
 })

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 
-import logoImage from '../assets/images/Apple.svg';
+import logoImage from '../assets/images/Apple.svg'
 import cartImage from '../assets/images/Cart1.svg'
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';

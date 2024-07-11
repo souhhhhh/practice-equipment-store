@@ -4,6 +4,7 @@ import { IProduct } from "../types";
 import Quantity from "./Quantity";
 import { useAppDispatch, useAppSelector } from "../redux/hooks";
 import { add } from "../redux/cart/counterSlice";
+
 interface IProductProps { 
     product: IProduct
 }
